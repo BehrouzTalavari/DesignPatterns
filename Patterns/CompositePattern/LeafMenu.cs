@@ -2,29 +2,14 @@
 {
     public class LeafMenu : INode
     {
-        private string url;
-        private string name;
-
-        public string Name
+        public string Name { get; set; }
+        public string Url { get; set; }
+        public bool Show { get; set; }
+        public void Print(string indent)
         {
-            get
+            if (Show)
             {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
-        }
-        public string Url
-        {
-            get
-            {
-                return url;
-            }
-            set
-            {
-                url = $"{Name}({value})";
+                Console.WriteLine($"{indent}Name: {Name} url: {Url}");
             }
         }
     }

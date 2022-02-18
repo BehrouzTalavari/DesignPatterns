@@ -19,5 +19,13 @@ namespace SpecificationPattern
         {
             return new AndSpec<T>(this, right);
         }
+        public Specification<T> Or(Specification<T> right)
+        {
+            return new ORSpec<T>(this, right);
+        }
+        public Specification<T> Not()
+        {
+            return new NotSpec<T>(this);
+        }
     }
 }

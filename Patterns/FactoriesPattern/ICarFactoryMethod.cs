@@ -1,11 +1,7 @@
 ﻿namespace FactoriesPattern
-{
-    public partial class Program
+{ 
+    public interface ICarFactoryMethod
     {
-        public interface ICarFactoryMethod
-        {
-            ICar CreateInstance();
-        }
+        ICar CreateInstance();
     }
-
 }

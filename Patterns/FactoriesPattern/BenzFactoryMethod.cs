@@ -1,14 +1,11 @@
 ﻿namespace FactoriesPattern
 {
-    public partial class Program
+    public class BenzFactoryMethod : ICarFactoryMethod
     {
-        public class BenzFactoryMethod : ICarFactoryMethod
+        public ICar CreateInstance()
         {
-            public ICar CreateInstance()
-            {
-                return new Benz();
-            }
+            return new Benz();
         }
-    }
+    } 
 
 }

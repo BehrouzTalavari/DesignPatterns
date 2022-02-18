@@ -4,7 +4,6 @@ namespace MediatorPattern
     public interface ITower
     {
         List<AIRPlain> AIRPlainList { get; set; }
-
         void Register(AIRPlain aIRPlain);
         void UnRegister(AIRPlain aIRPlain);
         bool AllowChange();

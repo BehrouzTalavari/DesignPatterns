@@ -2,35 +2,22 @@
 {
     public class GroupMenu : INode
     {
-        private string name;
+        public string Name { get; set; }
+        public string Url { get; set; }
+        public List<INode> Nodes { get; set; }
 
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value; 
-            }
-        }
-        public List<INode> Nodes
-        {
-            get
-            {
-                return Nodes;
-            }
+        public bool Show { get; set; }
 
-            set
+        public void Print(string indent)
+        {
+            if (Show)
             {
-                foreach (var node in value)
+                Console.WriteLine($"{indent}Name: {Name}");
+                foreach (var item in Nodes)
                 {
-                    node.Name = $"{Name}--{node.Name}";
-                    Console.WriteLine(node.Name);
+                    item.Print(indent + "-");
                 }
             }
         }
     }
-
 }
