@@ -62,8 +62,8 @@ var menu = new GroupMenu
 };
 foreach (var item in menu.Nodes)
 {
-    item.Print("*");
+    item.Print("");
 }
 Console.WriteLine("------------------------------------------");
-menu.Nodes[2].Print("*");
+menu.Nodes[2].Print("");
 Console.ReadKey();
